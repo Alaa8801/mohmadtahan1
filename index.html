@@ -459,10 +459,8 @@
           isAudioPlaying = true;
           updateAudioUI(true);
           if (audioFloatingBar) audioFloatingBar.classList.remove('hidden');
-          // إزالة مستمعات اللمس بمجرد نجاح التشغيل
           removeAutoPlayListeners();
         }).catch(err => {
-          // المتصفح ينتظر أول تفاعل باللمس
           console.log("Autoplay waiting for touch gesture:", err);
         });
       }
@@ -473,7 +471,7 @@
       playWeddingNasheed();
     });
 
-    // الاستماع لأي لمسة أو نقرة أولى في كامل الصفحة لتشغيل الصوت فوراً
+    // الاستماع لأي تفاعل أو لمسة أولى لتشغيل الصوت فوراً
     function triggerAudioOnFirstTouch() {
       playWeddingNasheed();
     }
@@ -529,7 +527,6 @@
       if (event && event.stopPropagation) {
         event.stopPropagation();
       }
-      // التأكد من تشغيل الصوت فوراً عند فتح الكرت
       playWeddingNasheed();
 
       if (cardHasOpened) return;
