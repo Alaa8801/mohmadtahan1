@@ -7,16 +7,16 @@
 
   <!-- وسوم المعاينة الفاخرة للواتساب ومنصات التواصل (Open Graph & WhatsApp Preview) -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="دعوة زفاف إسلامية مباركة" />
-  <meta property="og:title" content="💍 دعوة زفاف: محمد & كريمته | آل الطحان & آل أبودان" />
-  <meta property="og:description" content="يتشرف آل الطحان وآل أبودان بدعوتكم لحضور حفل الزفاف المبارك | الخميس 19/11/2026 في جامع سيف الدولة الحريري. انقر لفتح بطاقة الفرح والاستماع للإنشاد." />
-  <meta property="og:image" content="preview.jpg" />
+  <meta property="og:site_name" content="دعوة زفاف مباركة" />
+  <meta property="og:title" content="💍 دعوة زفاف: محمد & كريمته" />
+  <meta property="og:description" content="نتشرف بدعوتكم لحضور حفل زفاف العروسين | الخميس 19/11/2026 في جامع سيف الدولة الحريري. انقر لفتح بطاقة الفرح والاستماع للإنشاد." />
+  <meta property="og:image" content="groom.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="💍 دعوة زفاف: محمد & كريمته | آل الطحان & آل أبودان" />
+  <meta name="twitter:title" content="💍 دعوة زفاف: محمد & كريمته" />
   <meta name="twitter:description" content="حفل زفاف مبارك في جامع سيف الدولة الحريري طلعة الكرة الأرضية - الخميس 19 نوفمبر 2026" />
-  <meta name="twitter:image" content="preview.jpg" />
+  <meta name="twitter:image" content="groom.png" />
 
   <!-- الخطوط العربية الفاخرة الأصيلة من Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -191,7 +191,7 @@
   <!-- ============================================================== -->
   <!-- 1. واجهة الاستقبال الملكية: «بوابة النور والسرور» -->
   <!-- ============================================================== -->
-  <section id="entranceScreen" onclick="handleCardOpen(event)" class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-pearlIvory cursor-pointer">
+  <section id="entranceScreen" class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-pearlIvory cursor-pointer">
     
     <!-- الوشاح الأيمن -->
     <div class="veil-panel veil-left absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-pearlIvory via-[#FAF6EE] to-[#F1E9DA] border-r border-champagneGold/30 flex items-center justify-end shadow-2xl">
@@ -220,16 +220,12 @@
         <h3 id="guestWelcomeName" class="font-cairo text-xl sm:text-2xl font-black text-royalText leading-snug">
           أهلاً بضيوفنا الكرام
         </h3>
-        <p class="font-cairo text-[11px] text-deepGold font-bold">
-          آل الطحان & آل أبودان يرحبون بكم
-        </p>
       </div>
 
       <!-- زر اللمس الدائري التفاعلي للدخول (مفتاح النور) -->
       <button 
         type="button"
         id="enterGatewayBtn"
-        onclick="handleCardOpen(event)"
         class="pulse-glow-ring w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-gradient-to-tr from-champagneGold via-softGold to-champagneGold p-1.5 flex items-center justify-center cursor-pointer transition-transform duration-300 active:scale-95 focus:outline-none"
         aria-label="افتح بطاقة الفرح واستمع للإنشاد"
       >
@@ -318,24 +314,14 @@
     </section>
 
     <!-- ============================================================== -->
-    <!-- 4. صلب الدعوة الكريمة وبيانات العائلتين -->
+    <!-- 4. صلب الدعوة الكريمة وبيانات العروسين -->
     <!-- ============================================================== -->
     <section class="glass-pearl-card rounded-3xl p-6 sm:p-9 text-center space-y-6 border border-champagneGold/35 shadow-xl">
       
       <div class="space-y-3">
-        <p class="font-cairo text-base sm:text-lg font-bold text-royalText leading-loose">
-          يتشرف
-        </p>
-
-        <!-- أسماء العائلتين الكريمتين -->
-        <div class="py-1">
-          <h2 class="text-2xl sm:text-3xl font-cairo font-black text-royalText leading-snug">
-            آل الطحان <span class="text-deepGold font-normal">&</span> آل أبودان
-          </h2>
-        </div>
-
-        <p class="font-cairo text-base sm:text-lg font-bold text-subText leading-loose">
-          بدعوتكم الكريمة لحضور حفل عقد قران وزفاف الشاب المبارك
+        <!-- العبارة المعتمدة بعد إزالة أسماء العائلتين -->
+        <p class="font-cairo text-lg sm:text-xl font-bold text-royalText leading-loose">
+          نتشرف بدعوتكم لحضور حفل زفاف العروسين
         </p>
 
         <!-- اسما العريسين بخط الرقعة المذهب الفاخر -->
@@ -479,7 +465,7 @@
         حضوركم يكتمل به سرورنا ونفرح بكم 🤍
       </p>
       <p class="font-cairo text-xs text-subText">
-        آل الطحان & آل أبودان | الخميس 19 نوفمبر 2026
+        الخميس 19 نوفمبر 2026
       </p>
     </footer>
 
@@ -504,7 +490,7 @@
 
     function playWeddingNasheed() {
       if (nasheedAudio) {
-        nasheedAudio.volume = 0.75;
+        nasheedAudio.volume = 0.85;
         const playPromise = nasheedAudio.play();
         if (playPromise !== undefined) {
           playPromise.then(() => {
@@ -512,7 +498,7 @@
             updateAudioUI(true);
             audioFloatingBar.classList.remove('hidden');
           }).catch(err => {
-            console.log('Audio autoplay prevented, user interaction required:', err);
+            console.log('Audio autoplay prevented:', err);
             audioFloatingBar.classList.remove('hidden');
             updateAudioUI(false);
           });
@@ -549,7 +535,7 @@
     }
 
     // ----------------------------------------------------------------
-    // 2. فتح البوابة وعرض البطاقة وسماع الصوت الشريف
+    // 2. فتح البوابة وعرض البطاقة وتشغيل الصوت تلقائياً
     // ----------------------------------------------------------------
     let cardHasOpened = false;
 
@@ -560,14 +546,14 @@
       if (cardHasOpened) return;
       cardHasOpened = true;
 
-      // تشغيل المقطع الصوتي الشريف
+      // تشغيل الصوت الشريف مباشرة وفورياً مع نقرة المستخدم
       playWeddingNasheed();
 
       const entrance = document.getElementById('entranceScreen');
       const entranceCore = document.getElementById('entranceCore');
       const mainCard = document.getElementById('mainCard');
 
-      // إخفاء المحتوى المركزي أولاً
+      // إخفاء المحتوى المركزي للبوابة
       if (entranceCore) {
         entranceCore.style.opacity = '0';
         entranceCore.style.transform = 'scale(0.85)';
@@ -581,7 +567,7 @@
         entrance.classList.add('veil-open');
       }
 
-      // إظهار المحتوى الرئيسي
+      // إظهار محتوى كرت الدعوة الرئيسي
       setTimeout(() => {
         if (mainCard) {
           mainCard.classList.remove('hidden');
@@ -591,7 +577,6 @@
           }, 60);
         }
 
-        // إزالة شاشة البوابة لتمكين التمرير والتفاعل بالكامل
         setTimeout(() => {
           if (entrance) {
             entrance.style.display = 'none';
@@ -601,7 +586,7 @@
       }, 350);
     }
 
-    // ربط أحداث click و touchstart لتأكيد التجاوب الفوري على الهواتف
+    // ربط نقرة زر ومحيط البوابة بالحدث المباشر
     const openBtn = document.getElementById('enterGatewayBtn');
     const entranceGate = document.getElementById('entranceScreen');
 
@@ -683,7 +668,7 @@
     // 5. حفظ الموعد في تقويم الهاتف
     // ----------------------------------------------------------------
     document.getElementById('syncCalendarBtn').addEventListener('click', () => {
-      const title = encodeURIComponent('حفل زفاف: محمد & كريمته | آل الطحان & آل أبودان');
+      const title = encodeURIComponent('حفل زفاف: محمد & كريمته');
       const details = encodeURIComponent('حفل عقد قران وزفاف في جامع سيف الدولة الحريري طلعة الكرة الأرضية.');
       const location = encodeURIComponent('جامع سيف الدولة الحريري - طلعة الكرة الأرضية');
       const dates = '20261119T200000/20261119T230000';
@@ -718,10 +703,10 @@
     resizeCanvas();
 
     const luxuryTones = [
-      'rgba(197, 160, 89, ', // Champagne Gold
-      'rgba(226, 195, 130, ', // Soft Gold
-      'rgba(245, 240, 230, ', // Warm Pearl
-      'rgba(153, 116, 48, '   // Deep Gold
+      'rgba(197, 160, 89, ',
+      'rgba(226, 195, 130, ',
+      'rgba(245, 240, 230, ',
+      'rgba(153, 116, 48, '
     ];
 
     class SparkParticle {
